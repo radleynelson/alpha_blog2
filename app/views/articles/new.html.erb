@@ -1,0 +1,25 @@
+<body class="subpage">
+<%= render partial: 'partials/header' %>
+
+<!-- Three -->
+<section id="three" class="wrapper">
+  <div class="inner">
+    <header class="align-center">
+      <h1>Create Article</h1>
+    </header>
+
+    <%= form_for @article do |f| %>
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </p>
+        <p>
+          <%= f.label :description %>
+          <%= f.text_area :description %>
+        </p>
+
+        <%=f.submit %>
+
+    <% end %>
+  </div>
+</section>
